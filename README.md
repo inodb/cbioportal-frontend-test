@@ -7,8 +7,14 @@ Frontend of cBioPortal in React.
 Currently only shows clinical data tab.
 
 #### Build and Run
+Development
 ```
 cd patient
 npm install
 npm start
 ```
+Production
+```
+npm run build
+```
+Output in `dist/`
