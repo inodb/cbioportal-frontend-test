@@ -5,11 +5,11 @@ var env = process.env.NODE_ENV
 var config = {
   devtool: 'cheap-module-eval-source-map',
   entry: [
-    './clinical_table'
+    './components/patient/clinical_table'
   ],
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'clinical_table.js',
+    filename: path.join('patient', 'clinical_table.js'),
     publicPath: '/static/'
   },
   plugins: [

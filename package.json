@@ -6,7 +6,7 @@
     "start": "node server.js",
     "test": "cross-env NODE_ENV=test mocha --recursive --compilers js:babel-register",
     "test:watch": "npm test -- --watch",
-    "build": "NODE_ENV=production webpack --progress -p && cat index.html | sed 's:/static/::g' > dist/clinical_table.html"
+    "build": "mkdir -p dist/patient && NODE_ENV=production webpack --progress -p && cat components/patient/index.html | sed 's:/static/patient/::g' > dist/patient/clinical_table.html"
   },
   "repository": {
     "type": "git",
