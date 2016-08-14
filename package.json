@@ -1,5 +1,5 @@
 {
-  "name": "cbioportal-frontend-patient-view",
+  "name": "cbioportal-frontend",
   "version": "0.0.0",
   "description": "Patient View Example",
   "scripts": {
