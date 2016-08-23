@@ -4,12 +4,13 @@ var webpack = require('webpack')
 var env = process.env.NODE_ENV
 var config = {
   devtool: 'cheap-module-eval-source-map',
-  entry: [
-    './components/patient/clinical_table'
-  ],
+  entry: {
+    'clinical_table': './components/patient/clinical_table',
+    'pdx_hierarchy': './components/patient/pdx_hierarchy'
+  },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: path.join('patient', 'clinical_table.js'),
+    filename: path.join('patient', '[name].js'),
     publicPath: '/static/'
   },
   plugins: [
@@ -45,7 +46,7 @@ if (env === 'production') {
     })
   )
 } else {
-  config.entry.push('webpack-hot-middleware/client')
+  config.entry['webpack-hot-middleware-client'] = 'webpack-hot-middleware/client'
   config.plugins.push(new webpack.HotModuleReplacementPlugin())
 }
 
